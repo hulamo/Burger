@@ -21,6 +21,7 @@ router.post("/api/burgers", function (req, res) {
         // Send back the ID of the new burger
         res.json({ id: result.insertId });
     });
+console.log("Nueva Hamburguesa");
 });
 // Set burger devoured status to true.
 router.put("/api/burgers/:id", function(req, res) {

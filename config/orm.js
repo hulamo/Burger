@@ -54,7 +54,7 @@ var orm = {
         queryString += ") ";
 
         console.log(queryString);
-
+console.log("Nueva Hambueguesa");
         connection.query(queryString, vals, function(err, result) {
             if (err) {
                 throw err

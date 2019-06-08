@@ -1,4 +1,4 @@
-// Make sure we wait to attach our handlers until the DOM is fully loaded.
+// Este archivo es público y es el que está escuchando.
 $(function() {
 
     // Add a new burger.
@@ -8,7 +8,9 @@ $(function() {
         var newBurger = {
             burger_name: $("#newburger").val().trim(),
             devoured: 0
+            
         };
+        console.log("Nueva Hamburguesa");
 
         // Send the POST request.
         $.ajax("/api/burgers", {
@@ -37,12 +39,14 @@ $(function() {
             console.log("Burger devoured");
             location.reload();
         });
+        console.log("eat");
     });
 
     $(".trashburger").on("click", function(event) {
         event.preventDefault();
 
         var id = $(this).data("id");
+        console.log("borrar");
 
         // Send the DELETE request.
         $.ajax({
